@@ -109,14 +109,6 @@ npm run lint
 
 Cineverse can be deployed to any static hosting provider (Vercel, Netlify, GitHub Pages). Remember to set your `VITE_TMDB_API_KEY` in the hosting provider's environment variable settings.
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome. Feel free to check the [issues page](https://github.com/your-username/cineverse/issues).
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
 ## 🙏 Acknowledgements
 
 - [TMDB](https://www.themoviedb.org/) for providing the movie and TV data API
