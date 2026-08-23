@@ -1,16 +1,128 @@
-# React + Vite
+# 🎬 Cineverse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cineverse is a movie and TV discovery web app built with **React** and **Vite**, powered by **The Movie Database (TMDB) API**. Browse trending titles, search for movies and shows, and view detailed information — all in a fast, modern single-page app.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🔍 Search movies and TV shows in real time
+- 🔥 Browse trending, popular, and top-rated titles
+- 🎞️ Detailed view with overview, rating, release date, genres, and cast
+- 🖼️ Poster and backdrop images served via TMDB's image CDN
+- ⚡ Fast dev experience with Vite's HMR
+- 📱 Responsive UI for desktop and mobile
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Category   | Technology            |
+|------------|------------------------|
+| Frontend   | React (Vite)           |
+| Styling    | Tailwind |
+| Data       | TMDB API                |
+| Tooling    | ESLint, Vite            |
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm or yarn
+- A free [TMDB API key](https://www.themoviedb.org/settings/api)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/cineverse.git
+cd cineverse
+
+# Install dependencies
+npm install
+```
+
+### Environment Variables
+
+Create a `.env` file in the root directory and add your TMDB API key:
+
+```env
+VITE_TMDB_API_KEY=your_tmdb_api_key_here
+```
+
+> Vite requires environment variables to be prefixed with `VITE_` to be exposed to the client.
+
+### Running the App
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+The optimized production build will be output to the `dist/` folder.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 📁 Project Structure
+
+```
+cineverse/
+├── public/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/           # Page-level components
+│   ├── services/         # TMDB API calls
+│   ├── assets/           # Images, icons, etc.
+│   ├── App.jsx
+│   └── main.jsx
+├── .env
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## 🔌 API Reference
+
+Cineverse uses [TMDB's API v3](https://developer.themoviedb.org/reference/intro/getting-started) for:
+
+- `/trending/movie/{time_window}` — Trending movies
+- `/search/movie` — Search movies
+- `/movie/{movie_id}` — Movie details
+
+## 🧹 Linting
+
+This project uses ESLint for code quality. Run:
+
+```bash
+npm run lint
+```
+
+## 🚀 Deployment
+
+Cineverse can be deployed to any static hosting provider (Vercel, Netlify, GitHub Pages). Remember to set your `VITE_TMDB_API_KEY` in the hosting provider's environment variable settings.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome. Feel free to check the [issues page](https://github.com/your-username/cineverse/issues).
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgements
+
+- [TMDB](https://www.themoviedb.org/) for providing the movie and TV data API
+- [Vite](https://vitejs.dev/) for the build tooling
+- [React](https://react.dev/) for the UI framework
+
+---
+
+*This product uses the TMDB API but is not endorsed or certified by TMDB.*
