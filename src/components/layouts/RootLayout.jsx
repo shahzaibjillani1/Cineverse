@@ -11,13 +11,11 @@ export function RootLayout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-300">
-      {/* Scroll indicator bar at the top */}
+    
       <ScrollProgress />
 
-      {/* Sticky header navbar */}
       <Navbar />
 
-      {/* Content wrapper with route transitions */}
       <main className="flex-grow">
         <AnimatePresence mode="wait">
           <motion.div
@@ -33,13 +31,10 @@ export function RootLayout() {
         </AnimatePresence>
       </main>
 
-      {/* Sticky footer */}
       <Footer />
 
-      {/* Floating Scroll to Top button */}
       <BackToTop />
 
-      {/* Styled global toast messages */}
       <Toaster
         position="bottom-right"
         toastOptions={{
